@@ -58,7 +58,7 @@ export function Navbar() {
           <div className="flex items-center space-x-4">
             {user ? (
               <>
-                <Link href="/cart">
+                {/* <Link href="/cart">
                   <Button variant="ghost" size="icon" className="relative">
                     <ShoppingCart className="h-5 w-5" />
                     {itemCount > 0 && (
@@ -70,16 +70,9 @@ export function Navbar() {
                       </Badge>
                     )}
                   </Button>
-                </Link>
+                </Link> */}
 
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" className="relative h-8 w-8 rounded-full pointer-events-auto">
-                      <Avatar className="h-8 w-8">
-                        <AvatarFallback>{user.username.charAt(0).toUpperCase()}</AvatarFallback>
-                      </Avatar>
-                    </Button>
-                  </DropdownMenuTrigger>
+                <DropdownMenu>               
                   <DropdownMenuContent className="w-56" align="end" forceMount>
                     <div className="flex items-center justify-start gap-2 p-2">
                       <div className="flex flex-col space-y-1 leading-none">
