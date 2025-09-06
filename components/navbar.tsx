@@ -2,24 +2,11 @@
 
 import Link from "next/link"
 import Image from "next/image"
-
-import { useAuth } from "@/hooks/use-auth"
-import { useCart } from "@/hooks/use-cart"
 import { Button } from "@/components/ui/button"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
-import { ShoppingCart, User, LogOut, Package, Heart } from "lucide-react"
+import { useAuth } from "@/hooks/use-auth"
 
 export function Navbar() {
   const { user, logout } = useAuth()
-  const { itemCount } = useCart()
 
   return (
     <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -33,89 +20,48 @@ export function Navbar() {
                 alt="EverAgain Logo"
                 width={40}
                 height={40}
-                unoptimized={true} 
+                unoptimized
                 className="rounded-full aspect-square object"
-
-
               />
-              <span className="font-bold text-xl text-green-600">Connect, Share, Sustain</span>
+              <span className="font-bold text-xl text-green-600">
+                Connect, Share, Sustain
+              </span>
             </div>
           </Link>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-6">
-            <Link href="/marketplace" className="text-foreground/80 hover:text-foreground transition-colors">
+            <Link
+              href="/marketplace"
+              className="text-foreground/80 hover:text-foreground transition-colors"
+            >
               Marketplace
             </Link>
             {user && (
-              <Link href="/add-product" className="text-foreground/80 hover:text-foreground transition-colors">
+              <Link
+                href="/add-product"
+                className="text-foreground/80 hover:text-foreground transition-colors"
+              >
                 Sell Item
               </Link>
             )}
           </div>
 
           {/* User Actions */}
-          <div className="flex items-center space-x-4">
-            {user ? (
+          <div className="flex items-center space-x-2">
+            {!user ? (
               <>
-                {/* <Link href="/cart">
-                  <Button variant="ghost" size="icon" className="relative">
-                    <ShoppingCart className="h-5 w-5" />
-                    {itemCount > 0 && (
-                      <Badge
-                        variant="destructive"
-                        className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center p-0 text-xs"
-                      >
-                        {itemCount > 99 ? "99+" : itemCount}
-                      </Badge>
-                    )}
-                  </Button>
-                </Link> */}
-
-                <DropdownMenu>               
-                  <DropdownMenuContent className="w-56" align="end" forceMount>
-                    <div className="flex items-center justify-start gap-2 p-2">
-                      <div className="flex flex-col space-y-1 leading-none">
-                        <p className="font-medium">{user.username}</p>
-                        <p className="w-[200px] truncate text-sm text-muted-foreground">{user.email}</p>
-                      </div>
-                    </div>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem asChild>
-                      <Link href="/dashboard" className="flex items-center">
-                        <User className="mr-2 h-4 w-4" />
-                        Dashboard
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link href="/my-listings" className="flex items-center">
-                        <Package className="mr-2 h-4 w-4" />
-                        My Listings
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link href="/purchases" className="flex items-center">
-                        <Heart className="mr-2 h-4 w-4" />
-                        Purchases
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem onClick={logout} className="flex items-center">
-                      <LogOut className="mr-2 h-4 w-4" />
-                      Log out
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </>
-            ) : (
-              <div className="flex items-center space-x-2">
                 <Button variant="ghost" asChild>
                   <Link href="/login">Login</Link>
                 </Button>
                 <Button asChild>
                   <Link href="/signup">Sign Up</Link>
                 </Button>
-              </div>
+              </>
+            ) : (
+              <Button variant="destructive" onClick={logout}>
+                Logout
+              </Button>
             )}
           </div>
         </div>

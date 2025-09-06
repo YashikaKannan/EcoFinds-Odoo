@@ -12,10 +12,16 @@ export function formatPrice(price: number): string {
   }).format(price)
 }
 
-export function formatDate(date: Date | string): string {
+export function formatDate(date?: string | Date) {
+  if (!date) return "N/A" // or ""
+  
+  const d = new Date(date)
+  if (isNaN(d.getTime())) return "N/A" // invalid date
+  
   return new Intl.DateTimeFormat("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
-  }).format(new Date(date))
+  }).format(d)
 }
+
