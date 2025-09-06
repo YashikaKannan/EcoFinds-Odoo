@@ -13,7 +13,10 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "EverAgain - Sustainable Second-Hand Marketplace",
   description: "Discover and sell sustainable second-hand items in our eco-friendly marketplace",
-  generator: "v0.app",
+  icons: {
+    icon: "/Favicon.png",
+  },
+
 }
 
 export default function RootLayout({

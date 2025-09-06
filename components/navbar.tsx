@@ -1,6 +1,8 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
+
 import { useAuth } from "@/hooks/use-auth"
 import { useCart } from "@/hooks/use-cart"
 import { Button } from "@/components/ui/button"
@@ -24,11 +26,20 @@ export function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm">E</span>
+          <Link href="/">
+            <div className="flex items-center space-x-2">
+              <Image
+                src="/favicon.png"
+                alt="EverAgain Logo"
+                width={40}
+                height={40}
+                unoptimized={true} 
+                className="rounded-full aspect-square object"
+
+
+              />
+              <span className="font-bold text-xl text-green-600">Connect, Share, Sustain</span>
             </div>
-            <span className="font-bold text-xl text-green-600">EverAgain</span>
           </Link>
 
           {/* Navigation Links */}
