@@ -10,7 +10,7 @@ export default function HomePage() {
       <section className="container mx-auto px-4 py-20 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Welcome to <span className="text-green-600">EcoFinds</span>
+            Welcome to <span className="text-green-600">EverAgain</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
             Discover amazing second-hand treasures and give items a new life. Join our sustainable marketplace where
@@ -21,7 +21,7 @@ export default function HomePage() {
               <Link href="/marketplace">Start Shopping</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/signup">Join EcoFinds</Link>
+              <Link href="/signup">Join EverAgain</Link>
             </Button>
           </div>
         </div>
@@ -30,7 +30,7 @@ export default function HomePage() {
       {/* Features Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose EcoFinds?</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose EverAgain?</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             We're more than just a marketplace - we're a community committed to sustainable living
           </p>

@@ -37,7 +37,7 @@ export default function SignupPage() {
         <CardHeader className="space-y-1">
           <CardTitle className="text-2xl font-bold text-center">Create an account</CardTitle>
           <CardDescription className="text-center">
-            Join EcoFinds and start buying and selling sustainable items
+            Join EverAgain and start buying and selling sustainable items
           </CardDescription>
         </CardHeader>
         <CardContent>

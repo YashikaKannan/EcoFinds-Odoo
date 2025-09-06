@@ -180,7 +180,7 @@ export default function CartPage() {
                   Proceed to Checkout
                 </Button>
 
-                <p className="text-xs text-gray-500 text-center mt-4">Secure checkout powered by EcoFinds</p>
+                <p className="text-xs text-gray-500 text-center mt-4">Secure checkout powered by EverAgain</p>
               </CardContent>
             </Card>
           </div>

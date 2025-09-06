@@ -69,7 +69,7 @@ export default function AddProductPage() {
       <Card>
         <CardHeader>
           <CardTitle>List a New Item</CardTitle>
-          <CardDescription>Share details about the item you want to sell on EcoFinds</CardDescription>
+          <CardDescription>Share details about the item you want to sell on EverAgain </CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-6">

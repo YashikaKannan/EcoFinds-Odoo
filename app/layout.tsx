@@ -11,7 +11,7 @@ import { Navbar } from "@/components/navbar"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "EcoFinds - Sustainable Second-Hand Marketplace",
+  title: "EverAgain - Sustainable Second-Hand Marketplace",
   description: "Discover and sell sustainable second-hand items in our eco-friendly marketplace",
   generator: "v0.app",
 }

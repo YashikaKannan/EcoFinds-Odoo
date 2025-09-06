@@ -28,7 +28,7 @@ export function Navbar() {
             <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">E</span>
             </div>
-            <span className="font-bold text-xl text-green-600">EcoFinds</span>
+            <span className="font-bold text-xl text-green-600">EverAgain</span>
           </Link>
 
           {/* Navigation Links */}
@@ -63,7 +63,7 @@ export function Navbar() {
 
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+                    <Button variant="ghost" className="relative h-8 w-8 rounded-full pointer-events-auto">
                       <Avatar className="h-8 w-8">
                         <AvatarFallback>{user.username.charAt(0).toUpperCase()}</AvatarFallback>
                       </Avatar>
